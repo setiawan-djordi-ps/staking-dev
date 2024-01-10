@@ -1,0 +1,124 @@
+
+.header-container {
+    @apply flex items-center justify-center h-56 pt-32 w-full max-w-full relative z-20;
+    background: linear-gradient(94.39deg, rgba(162, 122, 255, 0.3) 0%, rgba(38, 175, 167, 0.3) 100%);
+    backdrop-filter: blur(15px);
+}
+
+
+.header {
+    @apply z-20 flex justify-between w-full max-w-7xl;
+}
+
+
+.list{
+    @apply text-ps_dark_blue z-20 relative p-0;
+
+    &  > li {
+        @apply flex justify-start items-center py-3 px-1 cursor-pointer gap-2;
+    }
+}
+
+
+.content-container {
+    @apply flex items-center justify-center my-10 w-full max-w-full z-10 relative h-full pb-32;
+}
+
+
+.content {
+    @apply relative z-10 max-w-7xl flex gap-10 text-ps_dark_blue font-museosans;
+}
+
+.content-list{
+    @apply w-1/4;
+}
+
+.content-text{
+    @apply w-3/4 mt-5 leading-loose font-museosans;
+}
+
+@media screen and (max-width: 1280px){ 
+    .content-container {
+        @apply flex items-center justify-center p-5 w-full max-w-full;
+    }
+    
+    .content-list{
+        @apply w-full;
+    }
+
+    .content-text{
+        @apply w-full mt-5;
+    }
+    
+    .content {
+        @apply relative z-10 max-w-6xl flex gap-5 text-ps_dark_blue font-museosans;
+    }
+    
+    .header-container {
+        @apply flex items-center justify-center h-full pt-32 pb-5  w-full max-w-full;
+        background: linear-gradient(94.39deg, rgba(162, 122, 255, 0.3) 0%, rgba(38, 175, 167, 0.3) 100%);
+        backdrop-filter: blur(15px);
+    }
+
+    .header {
+        @apply z-20 flex justify-between w-full px-10 gap-3;
+    }
+}
+
+
+@media screen and (max-width: 1024px){ 
+    .content-container {
+        @apply flex items-center justify-center p-5 w-full max-w-full;
+    }
+    
+    .content-list{
+        @apply w-full;
+    }
+
+    .content-text{
+        @apply w-full mt-5;
+    }
+    
+    .content {
+        @apply relative z-10 max-w-4xl flex  gap-10 text-ps_dark_blue font-museosans;
+    }
+    
+    .header-container {
+        @apply flex items-center justify-center h-full pt-32 pb-5  w-full max-w-full;
+        background: linear-gradient(94.39deg, rgba(162, 122, 255, 0.3) 0%, rgba(38, 175, 167, 0.3) 100%);
+        backdrop-filter: blur(15px);
+    }
+
+    .header {
+        @apply z-20 flex flex-col justify-between w-full px-10 gap-3;
+    }
+}
+
+
+@media screen and (max-width: 768px){ 
+    .content-container {
+        @apply flex items-center justify-center p-5 w-full max-w-full;
+    }
+    
+    .content-list{
+        @apply w-full;
+    }
+
+    .content-text{
+        @apply w-full mt-5;
+    }
+    
+    .content {
+        @apply relative z-10 max-w-7xl flex flex-col gap-10 text-ps_dark_blue font-museosans;
+    }
+    
+    .header-container {
+        @apply flex items-center justify-center h-full pt-32 pb-5  w-full max-w-full;
+        background: linear-gradient(94.39deg, rgba(162, 122, 255, 0.3) 0%, rgba(38, 175, 167, 0.3) 100%);
+        backdrop-filter: blur(15px);
+    }
+
+    .header {
+        @apply z-20 flex flex-col justify-between w-full px-5 gap-3;
+    }
+}

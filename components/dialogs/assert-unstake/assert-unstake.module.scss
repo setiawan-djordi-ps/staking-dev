@@ -1,0 +1,113 @@
+.unstake-shill-amount-item {
+    @apply mt-2 w-40 text-white;
+    border-radius: 10px;
+    background: var(--blue-green, #32A59E);
+    box-shadow: 6px 6px 20px 0px #168881 inset, -6px -6px 20px 0px rgba(235, 235, 235, 0.25) inset;
+    width: 100%;
+    & > p {
+        @apply p-3 m-0 tracking-wider;
+        position: relative;
+        border-radius: 10px;
+        // box-shadow: inset 5px 5px 10px #000, inset 0px 0px 15px #49484c;
+        font-size: 16px;
+        // color: rgba(196, 196, 196, 1);
+        @apply flex items-center;
+    }
+
+    & > span {
+        @apply text-xs font-light mb-10;
+    }
+}
+
+.unstake-amount-parent {
+    @apply text-[#632DDD];
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.unstake-shill-input {
+    background: transparent;
+    border: transparent;
+    width: 100%;
+    padding: 16px 16px;    
+    color: white;
+    border-radius: 8px;
+    font-size: 18px;
+    caret-color: white;
+    transition: 5 linear;
+    &:focus {
+        outline: white solid 2px;
+    }
+}
+
+.unstake-max-button {
+    position: absolute;
+    right: 16px;
+    top: 16px; 
+    color: #9CD1CD;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.unstake-amount-desc {
+    @apply font-extralight;
+    color: #632DDD;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.unstake-confirm-title {
+    @apply text-ps_purple font-black;
+    font-size: 23px;
+    // padding-left: 16px;
+    // color: #E2D087;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.unstake-confirm-title-parent {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    align-items: center;
+}
+
+.unstake-close-btn-parent {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.unstake-root {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 16px;
+}
+
+.btn-container{
+    @apply flex items-center gap-5 ;
+
+    & > .btn-back {
+        @apply w-full flex justify-center items-center py-1 border-ps_dark_blue border-solid border-2 cursor-pointer hover:bg-ps_green;
+        border-radius: 5px;
+        height: 45px;
+        background: #5F56C4;
+        color: #FFF;
+        text-align: center;
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+}
+
+.progress-dot-container{
+    @apply flex justify-center items-center w-96 h-40 mt-10;
+}

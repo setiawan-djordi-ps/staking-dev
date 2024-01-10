@@ -1,0 +1,26 @@
+.container {
+    @apply w-full flex bg-[#C6FFEE] bg-opacity-80;
+}
+
+.body {
+    @apply flex flex-col w-full pl-0 ;
+
+    & > li:last-child {
+        @apply border-b-0;
+    }
+}
+
+.li-styles{
+    @apply py-4 list-none text-center font-museosans text-ps_dark_blue opacity-100;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(0.25turn,  #0F63B7, #5FDDEE);
+    border-image-slice: 1
+}
+
+.current-campaign{
+    @apply text-ps_dark_blue py-4 list-none text-center font-museosans text-opacity-50;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(0.25turn,  #0F63B7, #5FDDEE);
+    border-image-slice: 1
+}
+

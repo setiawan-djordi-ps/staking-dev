@@ -1,0 +1,123 @@
+.text-info {
+  @apply text-ps_dark_blue font-museosans text-sm w-[650px];
+}
+
+.tab {
+    //min-height:50px;
+    @apply text-ps_green z-10 flex flex-col items-center  w-[650px];
+    
+}
+
+.tab:last-child {
+  @apply mb-40;
+}
+
+.search-container{
+   @apply w-[650px] relative my-5;
+}
+
+ul.inline {
+    @apply flex justify-around items-start ;
+    z-index: 10;
+    list-style:none;
+    width: 650px;
+    padding: 0;
+    margin-bottom:0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+    li{ 
+      @apply text-ps_dark_blue px-5;
+      z-index: 20;
+      display:inline-block;
+      margin-right: 0px;
+      margin-left:0;
+      padding:10px;
+      
+      border-bottom:3px solid transparent;
+      transition: all .5s;
+      cursor:pointer;
+      // color:#FFFFFF;
+      &.selected{
+        color:rgba(15, 99, 183, 0.5);
+        border-bottom: 3px solid transparent;
+        border-image: linear-gradient(0.25turn,  #0F63B7, #5FDDEE);
+        border-image-slice: 1;
+      }
+    }
+}
+
+.your-stakes-switch {
+    @apply text-ps_green z-10;
+    display: flex;
+    justify-content: center;
+    // color: white;
+    margin-top: 16px;
+}
+
+
+
+
+// lg
+@media screen and (max-width: 1536px) {
+
+  .search-container{
+    @apply w-[550px] relative my-5;
+   }
+
+  .text-info {
+    @apply text-ps_dark_blue font-museosans text-sm w-[550px];
+  }
+  
+  .tab {
+      @apply text-ps_green z-10 flex flex-col items-center  w-[550px];
+  }
+
+  ul.inline {
+    width: 550px;
+  }
+
+}
+
+//sm
+@media screen and (max-width: 768px){ 
+
+  .search-container{
+    @apply w-full relative my-5;
+   }
+
+}
+
+
+//xs
+@media screen and (max-width: 425px) {
+  /* CSS styles for smaller screens (mobile and small tablets) */
+  .your-stakes-switch {
+    display: none;
+  }  
+
+  .text-info {
+    @apply text-ps_dark_blue font-museosans text-sm w-full;
+  }
+  
+  .tab {
+      @apply text-ps_green z-10 flex flex-col items-center  w-full;
+  }
+
+  ul.inline {
+    @apply w-full;
+  }
+
+
+  .tab {
+    //min-height:50px;
+    // width:95%;
+    align-self: center;
+  }
+  
+  ul.inline {
+    text-align: center;
+  }
+}

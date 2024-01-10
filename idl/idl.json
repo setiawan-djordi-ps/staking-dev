@@ -1,0 +1,584 @@
+{
+  "version": "0.1.0",
+  "name": "staking_pool",
+  "instructions": [
+    {
+      "name": "initStaking",
+      "accounts": [
+        {
+          "name": "programStakeAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "programRewardAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "vault",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "adminRewardAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "adminRewardAccountAuthority",
+          "isMut": false,
+          "isSigner": true
+        },
+        {
+          "name": "rewardMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "stakeTokenMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "poolId",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "payer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rent",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "startTime",
+          "type": "i64"
+        },
+        {
+          "name": "endTime",
+          "type": "i64"
+        },
+        {
+          "name": "lockTime",
+          "type": "i64"
+        },
+        {
+          "name": "rewardAmount",
+          "type": "u64"
+        },
+        {
+          "name": "precision",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "initStaker",
+      "accounts": [
+        {
+          "name": "staker",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "identity",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "userStakeAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "stakeMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "poolId",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "stake",
+      "accounts": [
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "staker",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "identity",
+          "isMut": false,
+          "isSigner": true
+        },
+        {
+          "name": "vault",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userStakeAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "programStakeAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "programRewardAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userRewardAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "poolId",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "stakeMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rewardMint",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "programStakeBump",
+          "type": "u8"
+        },
+        {
+          "name": "programRewardBump",
+          "type": "u8"
+        },
+        {
+          "name": "stakeAmount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "unstake",
+      "accounts": [
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "staker",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "identity",
+          "isMut": false,
+          "isSigner": true
+        },
+        {
+          "name": "vault",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "programStakeAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userStakeAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "programRewardAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userRewardAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "poolId",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "stakeMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rewardMint",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "programStakeBump",
+          "type": "u8"
+        },
+        {
+          "name": "programRewardBump",
+          "type": "u8"
+        },
+        {
+          "name": "stakeAmount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "claimReward",
+      "accounts": [
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "staker",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "identity",
+          "isMut": false,
+          "isSigner": true
+        },
+        {
+          "name": "vault",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "programRewardAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "userRewardAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "poolId",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rewardMint",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "programRewardBump",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "closeStaker",
+      "accounts": [
+        {
+          "name": "staker",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "identity",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "withdrawLockReward",
+      "accounts": [
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "identity",
+          "isMut": false,
+          "isSigner": true
+        },
+        {
+          "name": "vault",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "programRewardAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "adminRewardAccount",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "poolId",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "rewardMint",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "programRewardBump",
+          "type": "u8"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Staker",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "identity",
+            "type": "publicKey"
+          },
+          {
+            "name": "tokenaccount",
+            "type": "publicKey"
+          },
+          {
+            "name": "mintaddress",
+            "type": "publicKey"
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "amount",
+            "type": "u64"
+          },
+          {
+            "name": "earnedRewards",
+            "type": "u64"
+          },
+          {
+            "name": "rewardDebt",
+            "type": "u64"
+          },
+          {
+            "name": "pendingReward",
+            "type": "u64"
+          },
+          {
+            "name": "lockedTime",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Vault",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mintaddress",
+            "type": "publicKey"
+          },
+          {
+            "name": "rewardaddress",
+            "type": "publicKey"
+          },
+          {
+            "name": "startTime",
+            "type": "i64"
+          },
+          {
+            "name": "endTime",
+            "type": "i64"
+          },
+          {
+            "name": "lockTime",
+            "type": "i64"
+          },
+          {
+            "name": "duration",
+            "type": "i64"
+          },
+          {
+            "name": "stakerCount",
+            "type": "u64"
+          },
+          {
+            "name": "totalStaked",
+            "type": "u64"
+          },
+          {
+            "name": "rewardPerSecond",
+            "type": "u64"
+          },
+          {
+            "name": "rewardAmount",
+            "type": "u64"
+          },
+          {
+            "name": "accRewardPerShare",
+            "type": "u64"
+          },
+          {
+            "name": "lastRewardTimestamp",
+            "type": "i64"
+          },
+          {
+            "name": "totalRewardDisburse",
+            "type": "u64"
+          },
+          {
+            "name": "precision",
+            "type": "u64"
+          },
+          {
+            "name": "started",
+            "type": "bool"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "AmountWrong",
+      "msg": "Token withdrawal amount invalid"
+    },
+    {
+      "code": 6001,
+      "name": "TokenAccWrong",
+      "msg": "Wrong User Token Account"
+    },
+    {
+      "code": 6002,
+      "name": "InitStakingWrong",
+      "msg": "Staking Already Started"
+    },
+    {
+      "code": 6003,
+      "name": "InitStakingWrongAdmin",
+      "msg": "Admin Staking is Wrong"
+    },
+    {
+      "code": 6004,
+      "name": "InitStakingNotStarted",
+      "msg": "Staking not Started yet"
+    },
+    {
+      "code": 6005,
+      "name": "StakeWrongAccount",
+      "msg": "Staking is not authorized for this account"
+    },
+    {
+      "code": 6006,
+      "name": "UnStakeWrongAccount",
+      "msg": "Unstaking is not authorized for this account"
+    },
+    {
+      "code": 6007,
+      "name": "ClaimWrongAccount",
+      "msg": "Claim Reward is not authorized for this account"
+    },
+    {
+      "code": 6008,
+      "name": "Claimlocked",
+      "msg": "reward still in locked period"
+    },
+    {
+      "code": 6009,
+      "name": "ClaimNotEligible",
+      "msg": "you have not participated in staking"
+    },
+    {
+      "code": 6010,
+      "name": "StakingEnded",
+      "msg": "staking period has ended"
+    },
+    {
+      "code": 6011,
+      "name": "Overflow",
+      "msg": "number error overflow"
+    },
+    {
+      "code": 6012,
+      "name": "ClosedAccountBalance",
+      "msg": "you still have active balance"
+    },
+    {
+      "code": 6013,
+      "name": "Underflow",
+      "msg": "you still have active balance"
+    }
+  ],
+  "metadata": {
+    "address": "6uxUB3cqShbAyyMeC3uzrDZdR6AuUEZUowsrxPfg3xHA"
+  }
+}

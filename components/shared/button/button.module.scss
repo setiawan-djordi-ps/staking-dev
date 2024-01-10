@@ -1,0 +1,11 @@
+.button-style {
+    @apply rounded-md text-center p-3 w-full z-20 text-white capitalize font-bold font-museosans cursor-pointer;
+    background: linear-gradient(0.25turn,#5F56C4,#5F56C4) padding-box,linear-gradient(0.25turn,#0F63B7,#5FDDEE) border-box;
+    border: 2px solid transparent;
+
+    &:hover {
+        @apply rounded-md text-center p-3 w-full z-20 text-white capitalize font-bold font-museosans ;
+        background: linear-gradient(0.25turn,#4AAA80,#4AAA80) padding-box,linear-gradient(0.25turn,#0F63B7,#5FDDEE) border-box;
+        border: 2px solid transparent;
+    }
+}

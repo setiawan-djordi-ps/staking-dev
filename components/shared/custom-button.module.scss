@@ -1,0 +1,14 @@
+.custom-button {
+    @apply border-white rounded border-solid border-2 text-sm text-white no-underline w-full cursor-pointer;
+    outline: none;
+    font-family: MuseoSans;
+    box-shadow: -5px -5px 15px #49484c;
+    transition: all 0.2s ease;
+
+    &:active {
+        @apply cursor-pointer;
+        box-shadow: inset 5px 5px 10px #000, inset 0px 0px 15px #49484c;
+        border-color: rgba(127, 123, 127, 1);
+        transform: translateY(-1px) translateX(-1px);
+    }
+}

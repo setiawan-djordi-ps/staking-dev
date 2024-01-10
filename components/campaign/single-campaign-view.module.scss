@@ -1,0 +1,18 @@
+.stake-campaign-parent {
+    @apply flex;
+    width: 100%;
+    height: auto;
+    flex-flow: wrap;
+    & > div {
+        margin-right: 32px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    /* CSS styles for smaller screens (mobile and small tablets) */
+    .stake-campaign-parent {
+        & > div {
+            margin-right: 8px;
+        }
+    }
+}

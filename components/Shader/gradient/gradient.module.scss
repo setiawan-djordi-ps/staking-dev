@@ -1,0 +1,13 @@
+.gradient-container {
+    @apply w-full h-screen fixed z-0 ;
+    
+    & > picture > img {
+        @apply object-cover w-full h-screen fixed;
+    }
+}
+
+.gradient-mask{
+    @apply object-cover w-full h-screen fixed z-10;
+}
+
+

@@ -1,0 +1,148 @@
+.header {
+    @apply w-full z-10 px-20 h-72 py-10 relative;
+    background: linear-gradient(94.39deg, rgba(162, 122, 255, 0.3) 0%, rgba(38, 175, 167, 0.3) 100%);
+    backdrop-filter: blur(15px);
+}
+
+.wrap {
+    @apply flex flex-col justify-center items-center mt-10 text-white h-full font-museosans ; 
+
+    & > div {
+        @apply w-[650px];
+    }
+}
+
+.breadcrumbs {
+    @apply text-ps_dark_blue inline-flex items-center;
+
+    & > p { 
+        @apply px-5 cursor-pointer capitalize;
+    }
+
+    & > div {
+        @apply text-ps_dark_blue inline-flex items-center ;
+
+        & > p { 
+            @apply px-2 capitalize;
+        }
+    
+    }
+}
+
+
+.content {
+    @apply relative flex justify-center items-center  w-full mt-10 mb-32 z-0;
+
+    & > div {
+        @apply max-w-7xl  grid grid-cols-2 justify-center items-center  z-0;
+    }
+}
+
+
+.card {
+    @apply flex flex-col justify-start items-center text-white w-96 h-96 mx-2 border-solid border-ps_dark_blue mt-5 cursor-pointer relative ;
+    background: radial-gradient(116.76% 116.76% at 50.14% -20.37%, #FFFFFF 0%, #B0F0E7 30.21%, #60DDD0 58.33%, #35C2D7 94.27%);
+    box-shadow: inset 0px -6px 4px rgba(52, 126, 130, 0.6), inset 0px 6px 4px rgba(255, 255, 255, 0.47);
+    border-radius: 13px;
+    & > p {
+        @apply text-ps_dark_blue font-museosans font-bold capitalize absolute bottom-2 text-xl; 
+    }
+}
+
+.card-image {
+    @apply -mt-10;
+}
+
+.search-dropdown-style{
+    @apply absolute w-full max-w-[650px];
+    margin-top: -42px;
+    & > ul {
+        @apply relative list-none p-0 rounded-xl pt-[25px];
+        background: rgba(19, 128, 142, 0.50);
+        backdrop-filter: blur(10px);
+       
+    }
+    
+    & > ul > li {
+        @apply p-3 cursor-pointer text-white;
+    }
+
+    & > ul > li:not(:last-child) {
+        border-bottom: 1px solid #0F63B7;
+    }
+}
+
+@media screen and (max-width: 768px){ 
+  
+    .header {
+        @apply px-5;
+    }
+    
+    .wrap {
+        & > h1 {
+            @apply text-lg;
+        }
+        & > div {
+            @apply w-full;
+        }
+    }
+    
+    .content {
+        @apply relative flex justify-center items-center  w-full  mb-32 ;
+    
+        & > div {
+            @apply w-full mx-5 grid grid-cols-1 justify-center items-center flex-wrap;
+        }
+    }
+    
+    .card-image {
+        @apply -mt-10 w-52 h-52;
+    }
+
+    .card {
+        @apply flex justify-center items-center text-white w-full h-72 mx-2 border-solid border-ps_dark_blue cursor-pointer relative;
+    
+    
+        & > p {
+            @apply text-ps_dark_blue font-museosans font-bold capitalize absolute bottom-2 text-xl; 
+        }
+    }
+
+
+    .breadcrumbs {
+        @apply text-ps_dark_blue inline-flex items-center flex-wrap;
+    
+        & > p { 
+            @apply px-5 cursor-pointer capitalize;
+        }
+    
+        & > div {
+            @apply text-ps_dark_blue inline-flex items-center ;
+    
+            & > p { 
+                @apply px-2 capitalize;
+            }
+        
+        }
+    }
+    
+    .search-dropdown-style{
+        @apply absolute w-full;
+        margin-top: -42px;
+        & > ul {
+            @apply relative list-none p-0 rounded-xl pt-[25px];
+            background: rgba(19, 128, 142, 0.50);
+            backdrop-filter: blur(10px);
+           
+        }
+        
+        & > ul > li {
+            @apply p-3 cursor-pointer;
+        }
+    
+        & > ul > li:not(:last-child) {
+            border-bottom: 1px solid #0F63B7;
+        }
+    }
+    
+}

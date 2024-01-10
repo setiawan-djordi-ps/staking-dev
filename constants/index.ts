@@ -1,0 +1,6 @@
+export const STEP = {
+  STEP_1: "CONNECT_WALLET",
+  STEP_2: "SHILL_ALLOTMENT",
+  STEP_3: "CLAIM_SEED",
+  STEP_4: "SEED_CLAIMED",
+};

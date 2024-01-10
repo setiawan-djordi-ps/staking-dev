@@ -1,0 +1,172 @@
+.balance-informations-container {
+    @apply flex flex-col w-full;
+    z-index:10;
+}
+
+.balance-informations-title {
+    @apply mb-5 text-left text-3xl;
+
+    & > h1 {
+        @apply font-black text-[5rem] m-0 text-[#632DDD];
+    }
+}
+
+.balance-informations-content {
+    @apply mb-5 md:mb-0;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.balance-information-subtitle {
+    margin: 8px 0px;
+    padding: 0px 14px;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px #6bb9a0 solid;
+    font-size: 13px;
+    &:first-child {
+        border-left: unset;
+        padding-left: 0;
+    }
+    text-align: center;
+    & > * {
+        line-height: 2em;
+    }
+}
+
+.balance-information-subtitle-desc {
+    font-size: 10px;
+}
+
+.balance-informations-item {
+    @apply my-4 relative ;
+    width: 100%;
+    & > p {
+        @apply m-0 p-3 my-2 tracking-wider z-10 bg-ps_blue_green text-white;
+        border-radius: 10px;
+        box-shadow: inset -6px -6px 20px rgba(235, 235, 235, 0.25), inset 6px 6px 20px #168881;
+        font-size: 16px;
+    }
+
+    & > span {
+        @apply text-xs font-light mb-10; 
+    }
+
+    & > label  {
+        @apply text-ps_dark_blue font-bold font-museosans;
+    }
+   
+    & > div > label {
+        @apply text-ps_dark_blue font-bold font-museosans;
+    }
+}
+
+#balance-information-item-space {
+    @apply mx-2;
+    display: flex;
+    flex-grow: 1;
+}
+
+#balance-amount {
+    & > img {
+        max-width: 16px;
+    }
+}
+
+.balance-information-rewards {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+// @media screen and (max-width: 425px) {
+//     /* CSS styles for smaller screens (mobile and small tablets) */
+//     .balance-informations-container {
+//         @apply text-white;
+//         margin-right: 0px;
+//         width: 40%;
+//         min-width: 300px;
+//     }
+// }
+
+.coin-stack-image{
+    @apply hidden;
+}
+
+
+
+//lg 
+@media screen and (max-width: 1280px) {
+    .balance-informations-container {
+        @apply text-white mr-0 w-full;
+    }
+
+    .balance-informations-title {
+        @apply text-left mb-0;
+    
+        & > h1 {
+            @apply font-black text-[2em] m-0 text-[#632DDD];
+        }
+    }
+}
+
+
+//md
+@media screen and (max-width: 1024px) {
+    .balance-informations-container {
+        @apply text-white mr-0 w-full;
+    }
+
+    .balance-informations-title {
+        @apply text-left mb-0;
+    
+        & > h1 {
+            @apply font-black text-[2em] m-0 text-[#632DDD];
+        }
+    }
+}
+
+//sm
+@media screen and (max-width: 768px){
+    .balance-informations-container {
+        @apply text-white mr-0 w-full;
+    }
+    
+    .coin-stack-image{
+        @apply absolute -right-5 -top-10 block;
+    }
+
+    .balance-informations-title {
+        @apply text-left mb-0;
+    
+        & > h1 {
+            @apply font-black text-[1.5em] m-0 text-[#632DDD];
+            max-width: 300;
+        }
+    }
+
+    .balance-informations-item {
+        @apply my-1;
+        width: 100%;
+        & > p {
+            @apply m-0 p-3 my-2 tracking-wider z-10 bg-ps_blue_green text-white;
+            border-radius: 10px;
+            box-shadow: inset -6px -6px 20px rgba(235, 235, 235, 0.25), inset 6px 6px 20px #168881;
+            font-size: 16px;
+        }
+    
+        & > span {
+            @apply text-xs font-light mb-10; 
+        }
+    
+        & > label  {
+            @apply text-ps_dark_blue font-bold font-museosans;
+        }
+       
+        & > div > label {
+            @apply text-ps_dark_blue font-bold font-museosans;
+        }
+    }
+    
+  
+}

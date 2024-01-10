@@ -1,0 +1,23 @@
+.search-input {
+    @apply flex items-center py-2 px-2  z-10 bg-ps_green rounded-xl h-[42px] relative;
+    background: #32A59E;
+    border: 1px solid #5FEEC4;
+    box-shadow: inset -6px -6px 20px rgba(235, 235, 235, 0.25), inset 6px 6px 20px #168881;
+    border-radius: 10px;
+
+    & > input::placeholder {
+        @apply text-white font-museosans text-opacity-80;
+    }
+}
+
+.search-field {
+  @apply bg-transparent border-none text-white outline-none w-full text-opacity-100 ml-2;
+  
+}
+
+
+@media screen and (max-width: 640px){ 
+  
+
+}
+

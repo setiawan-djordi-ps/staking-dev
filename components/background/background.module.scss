@@ -1,0 +1,11 @@
+.bg-image-style{
+    @apply object-cover w-full h-screen fixed z-10;
+}
+
+.bg-container {
+    @apply w-full h-screen fixed z-0 ;
+    
+    & > picture > img {
+        @apply object-cover w-full h-screen fixed;
+    }
+}

@@ -1,0 +1,55 @@
+.connect-wallet-container {
+    @apply flex items-center w-full text-white relative ;
+    // border-radius: 50px;
+    max-width: 400px;
+    // margin: auto;
+
+    & > button {
+        @apply rounded-full font-bold mb-5 relative text-white py-3 justify-center;
+        margin-right: auto;
+        outline: none;
+        // width: 90%;
+        min-height: 45px;
+        font-family: MuseoSans;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:active {
+            @apply cursor-pointer;
+            transform: translateY(-1px) translateX(-1px);
+        }
+
+        & >  img {
+            @apply absolute m-auto;
+            // top: 50%;
+            // left: 50%;
+            // transform: trans/late(-50%, -50%);
+            // height: 35px;
+            // left: 12px;
+        }
+
+       
+    }
+
+    h3 {
+        margin-right: auto;
+        margin-bottom: auto;
+    }
+
+    h4 {
+        margin-right: auto;
+    }
+}
+
+#button-icon-fox {
+    max-width: 35px;
+    top: 1px;
+    left: 10px;
+}
+
+#button-icon-shield {
+    top: 5px;
+    max-width: 30px;
+}
+
+

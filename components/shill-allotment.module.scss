@@ -1,0 +1,221 @@
+.shill-allotment-container {
+    @apply w-full text-white rounded-[20px] p-5;
+    box-shadow: -5px -5px 10px #49484c, 5px 5px 10px #000;
+}
+
+.SHILL-logo {
+    @apply absolute max-w-[16px] h-auto;
+}
+
+.i-description {
+    @apply absolute max-w-[12px] h-auto cursor-pointer;
+}
+
+.shill-allotment-tab {
+    @apply flex justify-around items-center;
+}
+
+/* =====================================CURRENT ALLOTMENT================================================== */
+
+.shill-allotment-current {
+    & > h3 {
+        @apply text-xs font-light mb-1;
+    }
+
+    p {
+        @apply relative flex items-center justify-between m-0 text-xs font-light text-[#c4c4c4] pl-9 min-h-[30px] rounded-[5px] p-1;
+        box-shadow: inset 5px 5px 10px #000, inset 0px 0px 15px #49484c;
+    }
+
+    .SHILL-logo {
+        @apply top-2 left-2;
+        // top: 9px;
+        // left: 7px;
+    }
+
+    .i-description {
+        @apply top-[-4px] right-[6px];
+    }
+
+    .i-description-container {
+        @apply relative;
+
+        &::after {
+            @apply absolute text-white rounded-[5px] min-h-[10px] top-[-9px] left-[-95px] whitespace-nowrap p-1 bg-[#666666c9];
+            content: attr(data-tool-tip);
+            transition: all 0.2s ease;
+            transform: scale(0);
+        }
+
+        &:active {
+            &::after {
+                @apply transform scale-100 top-[-31px];
+            }
+        }
+    }
+}
+
+.shill-allotment-claimed-token {
+    p {
+        @apply rounded-[5px] p-1;
+        box-shadow: inset 5px 5px 10px #000, inset 0px 0px 15px #49484c;
+    }
+}
+
+/* =====================================CLAIMABLE================================================== */
+.shill-allotment-claimable {
+    @apply flex justify-between items-center;
+}
+
+.shill-allotment-claim-input {
+    @apply relative w-[50%];
+
+    & > h3 {
+        @apply text-xs font-light mb-1;
+    }
+
+    & > input {
+        @apply bg-transparent rounded font-light m-0 py-1 px-8 w-full text-[12px] max-w-[155px] min-h-[25px];
+        outline: none;
+        color: rgba(196, 196, 196, 1);
+        box-shadow: inset 5px 5px 10px #000, inset 0px 0px 15px #49484c;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    }
+
+    & > .SHILL-logo {
+        @apply top-[36px] left-[7px];
+    }
+
+    & > .i-description-container {
+        @apply relative;
+
+        &::after {
+            @apply rounded p-1 absolute top-0 text-white whitespace-nowrap text-xs left-[-95px] min-h-[10px];
+            content: attr(data-tool-tip);
+            background-color: rgba(102, 102, 102, 0.788);
+            transform: scale(0);
+            transition: all 0.2s ease;
+        }
+
+        &:active {
+            &::after {
+                @apply transform scale-100 top-[-20px];
+            }
+        }
+    }
+
+    .i-description {
+        @apply top-[7px] left-[-21px];
+    }
+}
+
+.shill-allotment-claim-date {
+    @apply flex justify-end text-[8px] text-[#c4c4c4] mt-1;
+}
+
+/* =====================================CLAIMED TOKEN================================================== */
+.shill-allotment-claimed-token {
+    & > h3 {
+        @apply text-xs font-light mb-1;
+    }
+
+    & > p {
+        @apply relative flex items-center justify-end m-0 font-light text-gray-400 pr-8 w-full text-xs min-h-[25px];
+    }
+
+    .SHILL-logo {
+        top: 6px;
+        left: 7px;
+    }
+
+    .i-description-container {
+        @apply relative;
+
+        &::after {
+            @apply rounded p-1 absolute text-white whitespace-nowrap text-xs min-h-[10px];
+            content: attr(data-tool-tip);
+            background-color: rgba(102, 102, 102, 0.788);
+            top: -11px;
+            left: -64px;
+            transform: scale(0);
+            transition: all 0.2s ease;
+        }
+
+        &:active {
+            &::after {
+                transform: scale(1);
+                top: -30px;
+            }
+        }
+    }
+
+    .i-description {
+        top: -5.5px;
+        right: -20px;
+    }
+}
+
+/* =====================================UNLOCK PROGRESS BAR================================================== */
+.shill-allotment-unlock-progress-title {
+    @apply flex items-center justify-between text-xs pr-8;
+
+    > .i-description-container {
+        @apply relative;
+    }
+
+    .i-description-container {
+        &::after {
+            @apply rounded p-1 absolute text-white whitespace-nowrap;
+            content: attr(data-tool-tip);
+            background-color: rgba(102, 102, 102, 0.788);
+            min-height: 10px;
+            top: -6px;
+            left: -41px;
+            transform: scale(0);
+            transition: all 0.2s ease;
+            font-size: 12px;
+        }
+
+        &:active {
+            &::after {
+                transform: scale(1);
+                top: -25px;
+            }
+        }
+    }
+    .i-description {
+        top: 1px;
+        right: -20.5px;
+    }
+}
+.shill-allotment-progress-bar-border {
+    @apply w-full;
+    box-shadow: inset 5px 5px 10px #000, inset 0px 0px 15px #49484c;
+    border-radius: 10px;
+    min-height: 10px;
+}
+
+.shill-allotment-progress-bar {
+    @apply w-full relative;
+    border-radius: 10px;
+    min-height: 10px;
+    background-color: #7f7b7f;
+
+    > .SHILL-logo {
+        top: -6px;
+        left: 92%;
+        min-width: 24px;
+    }
+}
+
+.shill-allotment-select {
+    width: 100%;
+    background: transparent;
+    border-color: transparent;
+    color: white;
+    outline: transparent;
+}

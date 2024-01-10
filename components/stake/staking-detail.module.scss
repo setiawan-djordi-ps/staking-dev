@@ -1,0 +1,446 @@
+.staking-details-container {
+    @apply relative ;
+}
+
+
+.staking-details-header { 
+    @apply w-full px-20 h-72 py-10 fixed z-30;
+    background: linear-gradient(94.39deg, rgba(162, 122, 255, 0.3) 0%, rgba(38, 175, 167, 0.3) 100%);
+    backdrop-filter: blur(15px);
+}
+
+.staking-details-title-wrap {
+    @apply flex justify-between items-end w-full h-full;
+}
+
+.staking-details-item {
+    @apply my-2 text-[#632DDD] font-bold text-xl w-full max-w-sm text-center;
+
+    & > p {
+        @apply m-0 px-3 py-2 my-2 tracking-wider text-white bg-ps_blue_green text-center text-xl rounded-xl leading-8;
+        box-shadow: inset -6px -6px 20px rgba(235, 235, 235, 0.25), inset 6px 6px 20px #168881;
+    }
+}
+
+.staking-details-item-content {
+    @apply mt-4 text-ps_dark_blue;
+    
+    width: 100%;
+    & > p {
+        @apply m-0 px-3 py-4 my-2 tracking-wider text-white bg-ps_blue_green drop-shadow-lg flex items-center justify-between;
+        border-radius: 10px;
+        box-shadow: inset -6px -6px 20px rgba(235, 235, 235, 0.25), inset 6px 6px 20px #168881;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    & > span {
+        @apply text-xs font-light mb-10;        
+    }
+
+}
+
+.shill-staking-title-root {
+    @apply flex w-full max-w-sm;
+}
+
+.back-to-staking-pools {
+    @apply flex text-ps_dark_blue cursor-pointer items-center absolute top-28 underline font-museosans ;
+
+    & > svg {
+        @apply text-ps_dark_blue mr-2;
+    }
+}
+
+.shill-staking-title-parent {
+    @apply pl-0 gap-5 flex items-center justify-center;
+}
+
+
+.shill-staking-title {
+    @apply text-[#632DDD] font-black text-4xl ;
+}
+
+.shill-staking-subtitle {
+    @apply text-white text-base font-semibold pt-2 leading-5;
+}
+
+.staking-details-item-mobile{
+    display: none;
+}
+
+.shill-staking-header-stats-root {
+    @apply flex justify-evenly max-w-xl w-full items-stretch z-10 px-8 py-6 rounded-2xl text-white  h-[120px];
+    background: linear-gradient(94.39deg, #A27AFF 0%, #26AFA7 100%);
+    border: 2px solid #0F63B7;
+    backdrop-filter: blur(15px);
+    & > div {
+        @apply flex flex-col justify-end items-center;
+    }
+}
+
+.shill-staking-header-stats-title {
+    @apply font-bold text-center text-white text-opacity-80 ;
+}
+.shill-staking-header-stats-subtitle {
+    @apply flex justify-center items-center font-black font-museosans mt-4;
+    font-size: 0.85rem; 
+
+}
+
+.separator {
+    @apply border-ps_bright_green border-solid border-[1px];
+    // border: 1px solid #62B081;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.content-root {
+    @apply flex justify-start w-full p-20 relative;
+}
+
+.content-parent {
+    @apply  w-1/4 mr-0 fixed top-96;
+}
+
+.action-btn-parent {
+    @apply flex flex-col items-center w-full mt-80 mb-40;
+    height: fit-content;
+}
+
+
+.amount-parent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-shill-staked {
+    display: flex;
+    align-items: center;
+}
+
+.header-shill-logo{
+    @apply relative ;
+}
+
+
+
+// xl
+@media screen and (max-width: 1536px) {
+
+  
+    //header
+    .staking-details-header {
+        @apply w-full px-10 h-80 py-10 relative z-30;
+    }
+
+
+    .shill-staking-title-parent {
+        @apply pl-0 gap-5 flex items-center justify-center;
+    }
+
+    .shill-staking-title-root {
+        @apply flex w-1/4;
+    }
+
+   
+    .shill-staking-header-stats-root {
+        @apply flex justify-evenly max-w-lg items-stretch z-10 px-8 py-6 rounded-2xl text-white w-full text-base;
+        background: linear-gradient(94.39deg, #A27AFF 0%, #26AFA7 100%);
+        border: 2px solid #0F63B7;
+        backdrop-filter: blur(15px);
+    
+        & > div {
+            @apply flex flex-col justify-end items-center;
+        }
+    
+    }
+
+    .staking-details-item {
+        @apply my-2 text-[#632DDD] font-bold text-lg max-w-xs ml-14 text-center;
+    
+        & > p {
+            @apply m-0 px-3 py-3 my-2 tracking-wider text-white bg-ps_blue_green text-center text-base rounded-xl;
+            box-shadow: inset -6px -6px 20px rgba(235, 235, 235, 0.25), inset 6px 6px 20px #168881;
+        }
+    }
+
+    .back-to-staking-pools {
+        @apply flex text-ps_dark_blue max-w-full w-[55%] cursor-pointer items-center absolute top-28 underline font-museosans ;
+    
+        & > svg {
+            @apply text-ps_dark_blue mr-2;
+        }
+    }
+
+    .content-root {
+        @apply flex justify-start w-full p-10 min-h-screen gap-10 relative;
+    }
+
+    .content-parent {
+        @apply  w-1/4 mr-0 absolute top-10;
+    }
+
+    .action-btn-parent {
+        @apply flex flex-col items-center w-full mt-0 mb-10;
+    }
+
+    
+}
+
+
+//lg
+@media screen and (max-width:1280px) { 
+
+     //header
+
+    .staking-details-header {
+        @apply w-full px-10 h-72 py-10 relative z-30;
+    }
+
+    .shill-staking-title-parent {
+        @apply pl-0 gap-5 flex items-center justify-center;
+    }
+
+    .staking-details-title-wrap {
+        @apply flex justify-between items-end w-full h-full ;
+    }
+
+    .shill-staking-title {
+        @apply text-[#632DDD] font-black text-3xl ;
+    }
+
+    .header-shill-logo{
+        @apply relative ;
+    }
+
+    .shill-staking-title-root {
+        @apply w-3/4;
+    }
+
+    .staking-details-item{
+        @apply hidden;
+    }
+
+    .content-root {
+        @apply flex justify-start w-full p-10 min-h-screen gap-10 relative;
+    }
+
+    .content-parent {
+        @apply  w-2/5 mr-0 absolute top-10;
+    }
+
+    .action-btn-parent {
+        @apply flex flex-col items-end w-full mt-0 mb-10;
+    }
+
+    .shill-staking-header-stats-root {
+        @apply flex justify-evenly max-w-lg items-stretch z-10 px-2 py-6 rounded-2xl text-white text-xs;
+        background: linear-gradient(94.39deg, #A27AFF 0%, #26AFA7 100%);
+        border: 2px solid #0F63B7;
+        backdrop-filter: blur(15px);
+    
+        & > div {
+            @apply flex flex-col justify-end items-center;
+        }
+    }
+    
+
+    .staking-details-item-mobile {
+        @apply block my-2 text-ps_dark_blue font-bold text-lg w-full text-center;
+    
+        & > p {
+            @apply m-0 px-3 py-3 my-2 tracking-wider text-white bg-ps_blue_green text-center text-base rounded-xl;
+            box-shadow: inset -6px -6px 20px rgba(235, 235, 235, 0.25), inset 6px 6px 20px #168881;
+        }
+    }
+}
+
+//md 
+@media screen and (max-width:1024px) {
+    .staking-details-header {
+        @apply w-full px-10 h-72 py-10 relative z-30;
+    }
+
+    .staking-details-title-wrap {
+        @apply flex justify-between items-end w-full h-full ;
+    }
+
+    .shill-staking-title-parent {
+        @apply pl-0 gap-5 flex items-center justify-center;
+    }
+
+    .shill-staking-title {
+        @apply text-[#632DDD] font-black text-3xl ;
+    }
+
+    .header-shill-logo{
+        @apply relative ;
+    }
+
+    .shill-staking-title-root {
+        @apply w-3/4;
+    }
+
+    .staking-details-item{
+        @apply hidden;
+    }
+
+    .content-root {
+        @apply flex justify-start w-full p-10 gap-10 relative;
+    }
+
+    .content-parent {
+        @apply  w-[35%] mr-0 absolute top-10;
+    }
+
+    .action-btn-parent {
+        @apply flex flex-col items-end w-full mt-0 mb-20;
+    }
+
+    .staking-details-item-mobile {
+        @apply block my-2 text-ps_dark_blue font-bold text-lg w-full text-center;
+    
+        & > p {
+            @apply m-0 px-3 py-3 my-2 tracking-wider text-white bg-ps_blue_green text-center text-base rounded-xl;
+            box-shadow: inset -6px -6px 20px rgba(235, 235, 235, 0.25), inset 6px 6px 20px #168881;
+        }
+    }
+
+    .back-to-staking-pools {
+        @apply flex text-ps_dark_blue max-w-full w-[55%] cursor-pointer items-center absolute top-28 underline font-museosans ;
+    
+        & > svg {
+            @apply text-ps_dark_blue mr-2;
+        }
+    }
+}
+
+//sm
+@media screen and (max-width: 768px) {
+    
+    .separator {
+        @apply border-ps_bright_green border-solid border-[1px];
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    
+    .staking-details-container {
+        @apply z-20 relative h-full;
+    }
+
+    .staking-details-header { 
+        @apply relative w-full z-0 px-5 pt-32 h-full;
+    }
+
+    .staking-details-title-wrap {
+        @apply flex flex-col items-start justify-start h-full ;
+    }
+
+    .header-shill-logo{
+        @apply absolute left-5;
+    }
+
+    .shill-staking-title-root {
+        @apply flex w-full mr-0 mb-5;
+    }
+
+    // .back-to-staking-pools {
+    //     @apply flex text-ps_dark_blue cursor-pointer items-center absolute top-32 underline font-museosans ;
+    
+    //     & > svg {
+    //         @apply text-ps_dark_blue mr-2;
+    //     }
+    // }
+    
+    .back-to-staking-pools{
+        @apply hidden;
+    }
+
+    .shill-staking-title-parent {
+        @apply pl-0 flex flex-col flex-1 items-center justify-center;
+    }
+
+    .shill-staking-subtitle{
+        @apply text-sm;
+    }
+
+    .shill-staking-header-stats-root {
+        @apply flex justify-evenly max-w-full items-stretch z-10 px-2 py-6 rounded-2xl text-white text-xs;
+        background: linear-gradient(94.39deg, #A27AFF 0%, #26AFA7 100%);
+        border: 2px solid #0F63B7;
+        backdrop-filter: blur(15px);
+    
+        & > div {
+            @apply flex flex-col justify-end items-center;
+        }
+    }
+
+    .staking-details-item {
+        display: none;
+    }
+
+    .staking-details-item-mobile {
+        @apply block my-2 text-ps_dark_blue font-bold text-lg w-full text-center;
+    
+        & > p {
+            @apply m-0 px-3 py-3 my-2 tracking-wider text-white bg-ps_blue_green text-center text-base rounded-xl;
+            box-shadow: inset -6px -6px 20px rgba(235, 235, 235, 0.25), inset 6px 6px 20px #168881;
+        }
+    }
+
+    .content-parent {
+        @apply w-full pt-0 mr-0 relative top-0;
+        
+    }
+    //content body
+    .content-root {
+        @apply p-5;
+    }
+
+    .action-btn-parent {
+        @apply flex flex-col w-full mt-10;
+    }
+    .shill-staking-title {
+        font-size: 18px;
+    }
+    .staking-details-item {
+        display: none;
+    }
+
+    .content-root {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .action-btn-parent {
+        padding: 0px;    
+    }
+}
+
+
+//xs
+@media screen and (max-width: 425px) {
+    /* CSS styles for smaller screens (mobile and small tablets) */
+
+  
+
+    .shill-staking-title {
+        font-size: 18px;
+    }
+    
+
+    .staking-details-item {
+        display: none;
+    }
+
+    .content-root {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .action-btn-parent {
+        padding: 0px;    
+    }
+}

@@ -1,0 +1,109 @@
+.container {
+    @apply flex px-20 py-32 w-full justify-center items-center relative ;
+    // height: calc(100% - 100px);
+}
+
+.swap-title-style{
+    @apply z-30 absolute top-1/4 left-20 ;
+
+    & > h1 {
+        @apply text-[5em] m-0 font-black text-[#632DDD];
+    }
+
+    & > p {
+        @apply text-ps_dark_blue text-lg;
+    }
+}
+
+.swap-image-style{
+    @apply absolute right-20 max-w-xl ;
+}
+
+.swap-image-mobile-style{
+    @apply hidden;
+}
+
+//xl
+@media screen and (max-width: 1536px) {
+    .container {
+        @apply flex px-20 pt-32 z-20 w-full  justify-center items-center relative ;
+        height: calc(100% - 200px);
+    }
+    
+    .swap-title-style{
+        @apply z-30 absolute top-1/4 left-20 max-w-sm;
+    
+        & > h1 {
+            @apply text-[5em] m-0 font-black text-[#632DDD] ;
+        }
+    
+        & > p {
+            @apply text-ps_dark_blue text-lg;
+        }
+    }
+    
+    .swap-image-style{
+        @apply absolute right-0 max-w-sm ;
+    }
+}
+
+//lg
+@media screen and (max-width: 1280px) { 
+    .container {
+        @apply flex px-20 pt-32 z-20 w-full  justify-center items-center relative ;
+        height: calc(100% - 200px);
+    }
+    
+    .swap-title-style{
+        @apply z-30 absolute top-1/4 left-10 max-w-xs w-56;
+    
+        & > h1 {
+            @apply text-[4em] m-0 font-black text-[#632DDD] ;
+        }
+    
+        & > p {
+            @apply text-ps_dark_blue text-sm;
+        }
+    }
+    
+    .swap-image-style{
+        @apply absolute right-0 w-56;
+    }
+
+}
+
+//sm
+@media screen and (max-width: 768px){ 
+    .container {
+        @apply flex flex-col px-5 py-32 z-20 w-full h-full relative;
+    }
+    
+    .swap-title-style{
+        @apply z-30 relative top-0 left-0 w-full max-w-lg;
+    
+        & > h1 {
+            @apply text-[3em] m-0 font-black text-[#632DDD] text-left;
+        }
+    
+        & > p {
+            @apply text-ps_dark_blue text-xs;
+        }
+    }
+    
+    .swap-image-style{
+        @apply hidden;
+    }
+    
+    .swap-image-mobile-style{
+        @apply absolute -right-5 -top-5 block;
+    }
+    
+}
+
+//xs
+@media screen and (max-width: 640px){ 
+    .swap-title-style{
+        @apply  max-w-full;
+    }
+
+}

@@ -1,0 +1,17 @@
+.progress-dialog-root {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 16px;
+    align-items: center;
+    justify-content: center;
+    margin: 70px 0px;
+}
+
+.title {
+    font-size: 23px;
+    font-weight: 600;
+    padding-left: 16px,;
+    margin-bottom: 24px;
+    color: #9CD1CD;
+}

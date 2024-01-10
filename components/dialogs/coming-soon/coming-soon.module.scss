@@ -1,0 +1,26 @@
+.container{
+    @apply max-w-7xl max-h-96 h-96 w-full flex flex-col justify-center items-center;
+
+    & > img {
+        @apply mb-5 w-[350px];
+    }
+
+    & > h1 {
+        @apply mb-0 font-museosans font-bold;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        @apply max-w-7xl max-h-96 h-96 w-full flex flex-col justify-center items-center;
+    
+        & > img {
+            @apply mb-5 w-[250px];
+        }
+    
+        & > h1 {
+            @apply mb-0 font-museosans font-bold;
+        }
+    }
+    
+}

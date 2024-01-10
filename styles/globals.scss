@@ -1,0 +1,61 @@
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
+
+/* ======================================Importing MuseoSans Fonts====================================== */
+@font-face {
+    font-family: "MuseoSans";
+    src: local("MuseoSans"), url("../public/fonts/MuseoSans/MuseoSans_100.otf") format("opentype");
+    font-weight: 100;
+}
+@font-face {
+    font-family: "MuseoSans";
+    src: local("MuseoSans"), url("../public/fonts/MuseoSans/MuseoSans_300.otf") format("opentype");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "MuseoSans";
+    src: local("MuseoSans"), url("../public/fonts/MuseoSans/MuseoSans_500.otf") format("opentype");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "MuseoSans";
+    src: local("MuseoSans"), url("../public/fonts/MuseoSans/MuseoSans_700.otf") format("opentype");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "MuseoSans";
+    src: local("MuseoSans"), url("../public/fonts/MuseoSans/MuseoSans_900.otf") format("opentype");
+    font-weight: 900;
+}
+/* ===================================================================================================== */
+
+html,
+body {
+    // @apply p-0 md:pt-28 md:pt-0 m-0 bg-[#221f20] font-museosans;
+    @apply p-0 md:pt-28 md:pt-0 m-0 bg-[#FFFFFF] font-museosans;
+}
+
+* {
+    @apply box-border;
+}
+
+.slide-in-right-enter {
+    transform: translate(100%);
+}
+
+.slide-in-right-enter-active {
+    @apply transform translate-x-0 translate-y-0 opacity-100 duration-500;
+}
+
+.slide-in-right-exit {
+    @apply transform translate-x-0 translate-y-0 opacity-100;
+}
+
+.slide-in-right-exit-active {
+    @apply transform translate-x-[100%] translate-y-[100%] opacity-100 duration-500;
+}
+
+.web3modal-modal-lightbox{
+    z-index: 999 !important;
+}

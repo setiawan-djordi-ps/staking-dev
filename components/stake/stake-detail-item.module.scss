@@ -1,0 +1,185 @@
+.stake-detail-container {
+    @apply flex relative text-white max-w-xl w-full mx-2 text-sm border-ps_purple border-solid shadow-lg mb-10 rounded-2xl;
+    border-width: 2px;
+    background: radial-gradient(116.76% 116.76% at 50.14% -20.37%, #FFFFFF 0%, #B0F0E7 30.21%, #60DDD0 58.33%, #35C2D7 94.27%);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 13px;
+}
+
+.stake-detail-tagname {
+    position: absolute;
+    right: -20px;
+    top: -30px;
+    padding: 4px 28px 4px 8px;
+    background-color: #E2D087;
+    font-weight: 700;
+    color: #000;
+    border-radius: 1px;
+}
+
+.stake-detail-content {
+    display: flex;
+    padding: 15px;
+    padding-right: 30px;
+    width: 100%;
+    & > p {
+        @apply m-0 p-2 tracking-wider;
+        border-radius: 10px;
+        box-shadow: inset 5px 5px 10px #000, inset 0px 0px 15px #49484c;
+        font-size: 12px;
+        color: rgba(196, 196, 196, 1);
+        margin-left: 32px;
+    }    
+}
+
+.stake-detail-title {
+    @apply mb-8;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stake-detail-subtitle {
+    @apply mb-14 mt-2;
+    display: flex;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+}
+
+.stake-detail-item {
+    @apply my-2 text-ps_dark_blue w-full;
+
+
+    & > p {
+        @apply m-0 px-3 py-2 my-2 tracking-wider text-white bg-ps_blue_green text-base font-black;
+        box-shadow: inset -6px -6px 20px rgba(235, 235, 235, 0.25), inset 6px 6px 20px #168881;
+        border-radius: 10px;
+       
+    }
+
+    & > span {
+        @apply text-xs font-light mb-10;        
+    }
+}
+
+.stake-detail-field-title {
+    display: flex;
+    align-items: center;
+}
+
+.stake-detail-footer-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    margin-bottom: 16px;    
+}
+
+.item-title {
+    @apply text-ps_purple font-black text-xl mt-2;
+}
+
+.shill-staked-amount {
+    text-align: right;
+    font-size: 12px;    
+}
+
+.link {
+    @apply text-ps_purple;
+    margin-top: 1rem;
+    // color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.available-shill-parent {
+    @apply flex justify-between mt-3 text-ps_dark_blue text-opacity-80 text-xs;
+    // display: flex;
+    // justify-content: space-between;
+    // margin-top: 12px;
+    // color: rgba(255, 255, 255, 1);
+    // opacity: 0.8;
+    // font-size: 12px;
+}
+
+.unstake-link {
+    @apply flex justify-center underline text-ps_dark_blue text-xs mt-5;
+   
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+//xl
+@media screen and (max-width: 1536px) {
+    .stake-detail-container {
+        @apply flex relative text-white max-w-lg mx-0 text-sm border-ps_purple border-solid shadow-lg mb-10 rounded-2xl;
+    }
+}
+
+
+//lg
+@media screen and (max-width:1280px) { 
+    .stake-detail-container {
+        @apply flex relative text-white max-w-lg mx-0 text-sm border-ps_purple border-solid shadow-lg mb-10 rounded-2xl;
+       
+    }
+}
+
+
+//md 
+@media screen and (max-width:1024px) {
+    .stake-detail-container {
+        @apply flex relative text-white max-w-full w-[55%] mx-0 text-sm border-ps_purple border-solid shadow-lg mb-10 rounded-2xl;
+    }
+}
+
+//sm
+@media screen and (max-width:768px) {
+    .stake-detail-container {
+        @apply  mx-0  max-w-full;
+    }
+    .stake-detail-container {
+        width: 100%;
+    }
+    
+    .stake-detail-item {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+
+
+//xs
+// @media screen and (max-width: 425px) {
+//     .stake-detail-container {
+//         width: 100%;
+//     }
+    
+//     .stake-detail-item {
+//         margin-left: 0px;
+//         margin-right: 0px;
+//     }
+// }
+
+//
+.stake-button{
+    @apply text-white text-lg bg-ps_purple border-ps_dark_blue border-solid border-[1px] rounded-lg font-museosans w-full p-2 mt-5 text-center cursor-pointer;
+
+    &:hover {
+        @apply bg-ps_green transition duration-100 ease-in-out opacity-100 ;
+    }
+}
+
+.stakedisabled-button{
+    @apply text-white text-lg border-ps_dark_blue border-solid border-[1px] rounded-lg font-museosans w-full p-2 mt-5 text-center;
+    background-color: #49484c;
+    &:hover {
+        @apply bg-ps_green transition duration-100 ease-in-out opacity-100 ;
+    }
+}

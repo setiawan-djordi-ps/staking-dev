@@ -1,0 +1,42 @@
+.action-btn {
+  @apply flex items-center text-center; 
+  width: 100%;
+  color: white;
+  // padding: 12px 28px;
+  background: 
+    linear-gradient(#13808e,#13808e) padding-box,
+    // linear-gradient(to right, #4BAA80, #E2D087) border-box;
+    linear-gradient(to right, #7E45FF 60%, #2EBAE2 , #33CB98 ) border-box;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  &:hover {
+    // background: 
+    //   linear-gradient(#181718, #0a0a0a) padding-box,
+    //   linear-gradient(to right, #305846, #7c7452) border-box;
+   
+    background: radial-gradient(ellipse at 50% 200%, #f9f9f9 0%, #13808e 70%) padding-box,
+              linear-gradient(to right, #7E45FF 60%, #2EBAE2 , #33CB98 ) border-box;
+    background-position: bottom -10px;
+  } 
+}
+
+.action-btn-small {
+  width: 100%;
+  color: white;
+  padding: 6px 0px;
+  background: 
+    linear-gradient(#2D292B, #2D292B) padding-box,
+    // linear-gradient(to right, #4BAA80, #E2D087) border-box;
+    linear-gradient(to right, #7E45FF, #2EBAE2, #33CB98) border-box;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  &:hover {
+    background: 
+      linear-gradient(#181718, #0a0a0a) padding-box,
+      linear-gradient(to right, #305846, #7c7452) border-box;
+  }
+}

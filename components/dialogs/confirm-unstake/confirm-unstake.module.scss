@@ -1,0 +1,193 @@
+.unstake-shill-amount-item {
+    @apply mt-2;
+    width: 100%;
+    & > p {
+        @apply m-0 tracking-wider;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: inset 5px 5px 10px #000, inset 0px 0px 15px #49484c;
+        font-size: 16px;
+        color: rgba(196, 196, 196, 1);
+        @apply flex;
+    }
+
+    & > span {
+        @apply text-xs font-light mb-10;
+    }
+}
+
+.unstake-shill-input {
+    // background: transparent;
+    border-radius: 10px;
+    background: #32A59E;
+    box-shadow: 6px 6px 20px 0px #168881 inset, -6px -6px 20px 0px rgba(235, 235, 235, 0.25) inset;
+    border: transparent;
+    width: 100%;
+    padding: 16px 16px;    
+    color: white;
+    border-radius: 8px;
+    font-size: 18px;
+    caret-color: white;
+    transition: 5 linear;
+    &:focus {
+        outline: white solid 2px;
+    }
+}
+
+/* Chrome, Safari, Edge, Opera */
+.unstake-shill-input::-webkit-outer-spin-button,
+.unstake-shill-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* Firefox */
+.unstake-shill-input[type=number] {
+    -moz-appearance: textfield;
+  }
+  
+
+.unstake-max-button {
+    position: absolute;
+    right: 16px;
+    top: 16px; 
+    color: white;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.unstake-shill-root {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 16px;
+}
+
+.unstake-shill-close-btn-parent {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.unstake-shill-title-parent {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    align-items: center;
+    @apply text-ps_purple;
+}
+
+.unstake-shill-title {
+    font-size: 23px;
+    font-weight: 600;
+    padding-left: 16px;
+    @apply text-ps_purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stake-shill-title {
+    font-size: 23px;
+    font-weight: 600;
+    padding-left: 16px;
+    @apply text-ps_purple
+}
+
+.stake-button{
+    @apply text-white text-lg bg-ps_purple border-ps_dark_blue border-solid border-[1px] rounded-lg font-museosans w-full p-2 mt-5 text-center;
+
+    &:hover {
+        @apply bg-ps_green transition duration-100 ease-in-out opacity-100 ;
+    }
+}
+
+.stake-shill-desc-parent-left {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 10px;
+    border: 2px solid #049BB0;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.stake-detail-field-title {
+    display: flex;
+    align-items: center;
+}
+
+
+.stake-detail-item-text {
+    @apply my-2 text-ps_dark_blue ;
+    line-height: 30px;
+    // width: 100%;
+    margin-right: 10px;
+    
+    & > p {
+        // @apply m-0 px-3 py-2 my-2 tracking-wider;
+        // border-radius: 10px;
+        // box-shadow: inset 5px 5px 10px #000, inset 0px 0px 15px #49484c;
+        border-radius: 10px;
+        // color: rgba(196, 196, 196, 1);
+        width: max-content;
+    }
+
+    & > span {
+        @apply text-xs font-light mb-10;        
+    }
+}
+
+.stake-detail-item {
+    @apply my-2 text-ps_dark_blue w-full;
+
+    // width: 100%;
+    & > p {
+        // @apply m-0 px-3 py-2 my-2 tracking-wider;
+        // border-radius: 10px;
+        // box-shadow: inset 5px 5px 10px #000, inset 0px 0px 15px #49484c;
+        @apply m-0 px-3 py-2 my-2 tracking-wider text-white  text-base font-black;
+        border-radius: 10px;
+        font-size: 12px;
+        place-content: flex-end;
+        // color: rgba(196, 196, 196, 1);
+    }
+
+    & > span {
+        @apply text-xs font-light mb-10;        
+    }
+}
+
+.unstake-shill-desc-parent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.unstake-shill-desc {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.staking-balance-parent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    align-items: center;
+}
+
+.staking-balance-amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.percentage-btn {
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+}

@@ -1,0 +1,15 @@
+.h1-style{
+    @apply text-ps_dark_blue font-museosans font-black;
+}
+
+.p-style{
+    @apply font-museosans text-ps_dark_blue;
+}
+
+.title-style{
+    @apply font-museosans text-ps_dark_blue font-extrabold;
+}
+
+.ol-style{
+    @apply text-ps_dark_blue font-museosans text-sm;
+}

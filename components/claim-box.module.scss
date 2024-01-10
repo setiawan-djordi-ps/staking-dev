@@ -1,0 +1,78 @@
+.claim-box-container {
+    @apply flex flex-col items-center p-5 text-white w-full;
+    border-radius: 20px;
+    max-width: 350px;
+    box-shadow: 5px 5px 10px #000, -5px -5px 15px #49484c;
+}
+.claim-amount {
+    @apply rounded flex items-center justify-center font-light text-xs relative w-full;
+    min-height: 32px;
+    box-shadow: inset 5px 5px 10px #000, inset 0px 0px 15px #49484c;
+
+    & > img {
+        @apply h-auto absolute;
+        top: 7px;
+        left: 60px;
+        max-width: 20px;
+    }
+}
+
+.confirmation-button {
+    width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.progress-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0px;
+}
+
+.dots-progress {
+	position: relative;
+	top: -10px;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: #ffffff;
+	color: #ffffff;
+	transform-origin: 5px 15px;
+	animation: dotWindmill 2s infinite linear;
+  }
+  
+  .dots-progress::before, .dots-progress::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+  }
+  
+  .dots-progress::before {
+	left: -8.66px;
+	top: 15px;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: #ffffff;
+	color: #ffffff;
+  }
+  
+  .dots-progress::after {
+	left: 8.66px;
+	top: 15px;
+	width: 10px;
+	height: 10px;
+	border-radius: 5px;
+	background-color: #ffffff;
+	color: #ffffff;
+  }
+  
+  @keyframes dotWindmill {
+	0% {
+	  transform: rotateZ(0deg) translate3d(0, 0, 0);
+	}
+	100% {
+	  transform: rotateZ(720deg) translate3d(0, 0, 0);
+	}
+  }

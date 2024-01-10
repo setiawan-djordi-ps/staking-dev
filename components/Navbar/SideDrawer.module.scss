@@ -1,0 +1,6 @@
+.side-drawer {
+    @apply h-screen fixed top-0 right-0 w-56;
+    z-index: 100;
+    background-color: rgba(156, 209, 205, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}

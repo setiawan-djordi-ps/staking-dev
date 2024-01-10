@@ -1,0 +1,9 @@
+
+.staking-title-container {
+    @apply mb-5 text-center md:mb-0 md:text-left;
+
+    & > h1 {
+        @apply font-black text-6xl m-0;
+        color: rgba(107, 185, 160, 1);
+    }
+}

@@ -1,0 +1,186 @@
+.container {
+    @apply z-30 max-w-2xl w-full h-full max-h-[668px] p-5;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)), radial-gradient(103.89% 103.89% at 50.14% -7.5%, #FFFFFF 0%, #B0F0E7 30.21%, #60DDD0 58.33%, #35C2D7 94.27%);
+    box-shadow: inset 0px -6px 4px rgba(52, 126, 130, 0.6), inset 0px 6px 4px rgba(255, 255, 255, 0.47);
+    border: 6px solid #0F63B7;
+    border-radius: 25px;
+}
+
+.header {
+    @apply text-ps_dark_blue font-museosans text-xl;    
+
+    & > h2 {
+        @apply pb-4 m-0;
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(0.25turn,  #0F63B7, #5FDDEE);
+        border-image-slice: 1;
+    }
+
+
+}
+
+.body {
+    & > div > div > h3 {
+        @apply text-ps_dark_blue font-museosans font-normal text-base mb-1;
+    }
+}
+
+.input {
+    @apply flex items-center py-2 px-2  z-10 bg-ps_green rounded-xl h-14 relative;
+    background: #32A59E;
+    border: 1px solid #5FEEC4;
+    box-shadow: inset -6px -6px 20px rgba(235, 235, 235, 0.25), inset 6px 6px 20px #168881;
+    border-radius: 10px;
+
+    & > input::placeholder {
+        @apply text-white font-museosans text-opacity-80;
+    }
+
+    & > .input-amount {
+        @apply bg-transparent border-none text-white outline-none w-full text-opacity-100 ml-2 text-lg;
+    }
+}
+
+.table-style{
+    @apply rounded-md text-ps_dark_blue font-museosans w-full p-3 my-5 font-normal text-sm h-40;
+    border-radius: 5px;
+    border-image-slice: 10; 
+    border-image-repeat: round;
+    border-image-width: 20px;
+    border-image-source: url('/assets/border-gradient-transparent.svg');
+
+    & > tbody > tr > .table-td-style{
+        @apply flex items-center gap-5 relative w-full;
+    }
+
+    & > tbody > tr > .value-style {
+        @apply  text-right;
+    }
+
+    & > tbody > tr > td > .slippage-tolerance-value-style{
+        @apply text-center text-white rounded-md p-0.5;
+        border-radius: 3px;
+        background: var(--blue-green, #32A59E);
+        box-shadow: 3px 3px 3px 0px #168881 inset, -3px -3px 3px 0px rgba(235, 235, 235, 0.25) inset;
+      
+    }
+}
+
+.switch-token-style{
+    @apply flex items-center my-5 gap-20;
+
+    & > .switch-icon {
+        @apply cursor-pointer;
+    }
+}
+
+.switch-value-style{
+    @apply flex items-center text-ps_dark_blue gap-5;
+
+    & > div {
+        @apply flex items-center cursor-pointer;
+    }
+}
+
+.tooltip-style{
+    @apply absolute text-white bg-ps_blue_green shadow-lg rounded-lg p-4 top-[100%] w-3/4 -left-10 z-50  -translate-x-12 ;
+}
+
+.select-style{
+    @apply rounded-full max-w-xs w-1/2 px-3 py-1 flex justify-between items-center relative cursor-pointer;
+    background: linear-gradient(0.25turn,#5F56C4,#5F56C4) padding-box,linear-gradient(0.25turn,#0F63B7,#5FDDEE) border-box;
+    border: 2px solid transparent;
+
+    & > .select-token-name-style {
+        @apply flex items-center gap-2;
+
+        & > p {
+            @apply uppercase text-white font-museosans font-black m-0;
+        }
+
+        & > .select-token-icon > div {
+            @apply flex items-center;
+        }
+    }
+
+    &  > .select-icon {
+        @apply flex justify-center items-center;
+    }
+}
+
+
+.button-style{
+    @apply rounded-md text-center p-4 text-xl font-semibold w-full z-20 text-white capitalize font-bold font-museosans cursor-pointer;
+    background: linear-gradient(0.25turn,#5F56C4,#5F56C4) padding-box,linear-gradient(0.25turn,#0F63B7,#5FDDEE) border-box;
+    border: 2px solid transparent;
+
+    &:hover {
+        @apply rounded-md text-center w-full z-20 text-white capitalize font-bold font-museosans ;
+        background: linear-gradient(0.25turn,#4AAA80,#4AAA80) padding-box,linear-gradient(0.25turn,#0F63B7,#5FDDEE) border-box;
+        border: 2px solid transparent;
+    }
+}
+
+.footer {
+    @apply flex flex-wrap gap-5 justify-center items-center;
+
+    & > div {
+        @apply text-ps_dark_blue font-museosans font-normal flex justify-center items-center;
+
+        & > span > a {
+            @apply mx-1 font-black text-ps_dark_blue;
+            
+        }
+    }
+}
+
+
+//xl
+@media screen and (max-width: 1536px) { 
+    .container {
+        @apply z-30 max-w-xl w-full h-full max-h-[668px] p-5;
+    }
+}
+
+
+//lg
+@media screen and (max-width: 1280px) { 
+    .container {
+        @apply z-30 max-w-md w-full h-full max-h-[668px] p-5;
+    }
+}
+
+
+//md
+@media screen and (max-width: 1280px) { 
+    .container {
+        @apply z-30 max-w-lg w-full h-full max-h-[668px] p-5;
+    }
+}
+
+
+//sm
+@media screen and (max-width: 768px){
+    .select-style{
+        @apply rounded-full max-w-sm w-full px-3 py-1 flex justify-between items-center relative cursor-pointer;
+        background: linear-gradient(0.25turn,#5F56C4,#5F56C4) padding-box,linear-gradient(0.25turn,#0F63B7,#5FDDEE) border-box;
+        border: 2px solid transparent;
+    
+        & > .select-token-name-style {
+            @apply flex items-center gap-2;
+    
+            & > p {
+                @apply uppercase text-white font-museosans font-black m-0;
+            }
+    
+            & > .select-token-icon > div {
+                @apply flex items-center;
+            }
+        }
+    
+        &  > .select-icon {
+            @apply flex justify-center items-center;
+        }
+    }
+    
+}

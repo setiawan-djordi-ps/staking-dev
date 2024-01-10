@@ -1,0 +1,229 @@
+.container {
+    @apply flex items-center px-20 h-56 pt-32 z-20 relative;
+    background: linear-gradient(94.39deg, rgba(162, 122, 255, 0.3) 0%, rgba(38, 175, 167, 0.3) 100%);
+    backdrop-filter: blur(15px);
+}
+
+
+.header {
+    @apply z-20 flex justify-between w-full px-40;
+}
+
+
+.breadcrumbs {
+    @apply text-ps_dark_blue inline-flex items-center;
+
+    & > p { 
+        @apply px-5 cursor-pointer capitalize;
+    }
+
+    & > div {
+        @apply text-ps_dark_blue inline-flex items-center ;
+
+        & > p { 
+            @apply px-2 capitalize;
+        }
+    
+    }
+}
+
+
+
+.body {
+    @apply flex justify-center items-start w-full h-full py-20 mb-20 max-h-screen z-20;
+}
+
+
+.body-content {
+    @apply rounded-2xl w-1/3 max-w-6xl text-ps_dark_blue z-20 border-ps_dark_blue border-solid bg-[#C6FFEE] bg-opacity-80;
+
+    & > h1 {
+        @apply capitalize px-10  p-5; 
+    }
+
+
+    & > ul {
+        @apply list-none p-0;
+    }
+
+
+    & > ul > li {
+        @apply flex justify-start items-center border-t-2 border-b-0 border-r-0 border-l-0 border-ps_dark_blue border-solid p-5 hover:bg-ps_dark_blue hover:bg-opacity-50 cursor-pointer;
+    }
+}
+
+.images {
+    @apply z-10 absolute right-20 bottom-40;
+}
+
+
+
+
+.left-panel {
+    @apply text-ps_dark_blue z-20 w-1/4;
+
+    & > ul {
+        @apply list-none p-0;
+    }
+
+    & > ul > li {
+        @apply flex justify-start items-center py-3;
+    }
+}
+
+.context {
+    @apply z-20 text-ps_dark_blue font-museosans text-xl w-1/2 h-full break-words relative;
+    
+}
+
+.more-articles{
+    @apply hidden;
+}
+
+
+
+
+//md 
+@media screen and (max-width: 1024px) {
+    .container {
+        @apply flex items-center px-10 h-full pt-28 pb-10;
+       
+    }
+    .header {
+        @apply z-20 flex flex-col justify-between w-full px-5 flex-wrap;
+    }
+    
+    .images {
+        @apply z-30 absolute right-0 bottom-40 max-w-xs;
+    }
+
+    .body {
+        @apply flex justify-center gap-10 items-start w-full h-screen p-5 z-20;
+    }
+    
+    .context {
+        @apply z-20 text-ps_dark_blue font-museosans text-xl w-3/4 py-10 h-full break-words relative;
+    }
+    
+    .body-content {
+        @apply rounded-2xl w-3/4 text-ps_dark_blue z-20 border-ps_dark_blue border-solid bg-[#C6FFEE] bg-opacity-80;
+    
+        & > h1 {
+            @apply capitalize px-10  p-5; 
+        }
+    
+    
+        & > ul {
+            @apply list-none p-0;
+        }
+    
+    
+        & > ul > li {
+            @apply flex justify-start items-center border-t-2 border-b-0 border-r-0 border-l-0 border-ps_dark_blue border-solid p-5 hover:bg-ps_dark_blue hover:bg-opacity-50 cursor-pointer;
+        }
+    }
+}
+
+//sm
+@media screen and (max-width: 768px) {
+    .container {
+        @apply flex items-center px-0 h-full pt-28 pb-10 z-30 relative;
+       
+    }
+
+    .header {
+        @apply z-20 flex flex-col justify-between w-full px-5 flex-wrap;
+    }
+    
+
+    .body-content {
+        @apply rounded-2xl w-full text-ps_dark_blue z-20 border-ps_dark_blue border-solid bg-[#C6FFEE] bg-opacity-80 my-32;
+    
+        & > h1 {
+            @apply capitalize px-10  p-5; 
+        }
+    
+    
+        & > ul {
+            @apply list-none p-0;
+        }
+    
+    
+        & > ul > li {
+            @apply flex justify-start items-center border-t-2 border-b-0 border-r-0 border-l-0 border-ps_dark_blue border-solid p-5 hover:bg-ps_dark_blue hover:bg-opacity-50 cursor-pointer;
+        }
+    }
+    
+
+    .body {
+        @apply flex justify-center items-start w-full h-screen p-5 z-20;
+    }
+    
+
+
+    .images {
+        @apply hidden;
+    }
+
+
+    .breadcrumbs {
+        @apply text-ps_dark_blue flex items-center flex-wrap ;
+        
+
+        & > svg {
+            @apply mx-5;
+        }
+
+        & > p { 
+            @apply cursor-pointer capitalize px-0;
+        }
+    
+        & > div {
+            @apply text-ps_dark_blue inline-flex ;
+    
+            & > p { 
+                @apply px-0 capitalize;
+            }
+
+            & > svg {
+                @apply mr-5;
+            }
+        }
+    }
+    .more-articles-header {
+        @apply flex items-center justify-center w-full h-10 font-museosans font-black cursor-pointer; 
+
+        & > svg {
+            @apply absolute right-5;
+        }
+    }
+
+    .more-articles {
+        @apply w-full mb-5;
+        border-bottom:3px solid transparent;
+        border-image: linear-gradient(0.25turn,  #0F63B7, #5FDDEE);
+        border-image-slice: 1;
+
+        & > ul {
+            @apply list-none pl-0 mb-5; 
+        }
+
+        & > ul > li {
+            @apply py-2 text-base font-museosans font-bold border-ps_dark_blue;
+            border-top:1px solid;
+        }
+    }
+
+    .left-panel {
+        @apply  hidden;
+    }
+
+    .context {
+        @apply z-20 text-ps_dark_blue font-museosans text-xl w-full py-10 h-full break-words relative;
+        
+    }
+
+    .mark-down {
+        @apply font-museosans text-lg; 
+    }
+}

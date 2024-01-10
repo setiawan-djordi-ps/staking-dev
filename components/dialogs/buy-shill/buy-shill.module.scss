@@ -1,0 +1,42 @@
+.buy-shill-root {
+    @apply flex flex-col w-80 p-2 z-30;
+}
+
+.buy-shill-close-btn-parent {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buy-shill-title-parent {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    align-items: center;
+}
+
+.buy-shill-title {
+    @apply text-ps_dark_blue text-lg font-bold pl-4;
+}
+
+.buy-shill-desc-parent {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buy-shill-desc {
+    text-align: center;
+    width: 70%;
+    margin-top: 12px;
+}
+
+
+
+.button-style{
+    @apply text-white text-lg bg-ps_purple border-ps_dark_blue border-solid border-[1px] rounded-lg font-museosans w-full p-2 mt-5 text-center;
+
+    &:hover {
+        @apply bg-ps_green transition duration-100 ease-in-out opacity-100 ;
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "introduction": [
+        "Introduction",
+        "How Does Staking Work on Project SEED?",
+        "The Benefits of Staking on Project SEED",
+        "Security & Risks"
+    ],
+    "getting-started":[
+        "SHILL Token",
+        "Wallet Requirements",
+        "Connecting Your Wallet",
+        "Disconnecting and Switching Wallet"
+    ],
+    "swap":[
+        "Swapping Tokens",
+        "How to Swap Other Tokens to SHILL"
+    ],
+    "staking":[
+        "Minimum and Maximum Staking Amounts",
+        "How to Stake",
+        "How to Add More Tokens to the Staking Pool",
+        "How to Unstake",
+        "How to Claim Rewards",
+        "How to Withdraw Staked Tokens When the Staking Period Ends",
+        "Staking Page Overview",
+        "Staking Fees and Associated Costs",
+        "Staking Pools"
+    ]
+}

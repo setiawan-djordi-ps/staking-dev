@@ -1,0 +1,27 @@
+.container{
+    @apply z-30; 
+}
+
+.h1-style{
+    @apply text-ps_dark_blue font-museosans font-black align-baseline;
+}
+
+.h2-style{
+    @apply text-ps_dark_blue font-museosans font-bold align-baseline text-base;
+}
+
+.p-style{
+    @apply text-ps_dark_blue font-museosans text-sm font-normal align-baseline;
+}
+
+.title-style{
+    @apply font-extrabold text-ps_dark_blue font-museosans align-baseline;
+}
+
+.ol-style{
+    @apply text-ps_dark_blue align-baseline font-museosans text-sm;
+
+    & > li > .alpha-list {
+        list-style-type: lower-alpha;
+    }
+}
